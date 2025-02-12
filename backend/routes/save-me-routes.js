@@ -6,7 +6,7 @@ import {
   updateSaveMe,
   deleteSaveMe,
   getAllSaveMes, // Import the new controller function
-} from "../controllers/saveMeController.js";
+} from "../controllers/save-me-controller.js";
 
 // Setup for file upload
 const storage = multer.diskStorage({

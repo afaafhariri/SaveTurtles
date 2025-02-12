@@ -1,29 +1,28 @@
 import express from "express";
 import { PORT, mongoDBURL } from "./config.js";
 import mongoose from "mongoose";
-import eventRoute from "./routes/eventRoute.js";
 import cors from "cors";
-import eventParticipantRoute from "./routes/eventParticipentRoute.js";
 import { fileURLToPath } from "url";
 import path from "path";
-import bookingEmail from "./routes/bookingEmail.js";
-import adminRoute from "./routes/AdminRoute.js";
-import faqRouter from "./routes/faqRoutes.js";
-import ticketRouter from "./routes/ticketRoutes.js";
-import productRoute from "./routes/productRoute.js";
-import purchaseRoute from "./routes/purchaseRoute.js";
-import refundRoute from "./routes/refundRoutes.js";
-import ReturnRouter from "./routes/ReturnsRoute.js";
-import donationsRoute from "./routes/donationsRoute.js";
-import purchaseEmail from "./routes/purchaseEmail.js";
-import donationEmail from "./routes/donationEmail.js";
-import saveMeRouter from "./routes/saveMeRoutes.js";
-import returnProductEmail from "./routes/returnProductEmail.js";
-import MembershipRouter from "./routes/membershipsRoute.js";
-import SubscriptionRouter from "./routes/subscriptionRoute.js";
-import subEmailRouter from "./routes/subscriptionEmail.js";
-
-import refundEmail from "./routes/refundEmail.js";
+import eventRoute from "./routes/event-routes.js";
+import eventParticipantRoute from "./routes/participants-routes.js";
+import bookingEmail from "./routes/booking-email.js";
+import adminRoute from "./routes/admin-routes.js";
+import faqRouter from "./routes/faq-routes.js";
+import ticketRouter from "./routes/ticket-routes.js";
+import productRoute from "./routes/product-routes.js";
+import purchaseRoute from "./routes/purchase-routes.js";
+import refundRoute from "./routes/refund-routes.js";
+import ReturnRouter from "./routes/return-routes.js";
+import donationsRoute from "./routes/donation-routes.js";
+import purchaseEmail from "./routes/purchase-email.js";
+import donationEmail from "./routes/donation-email.js";
+import saveMeRouter from "./routes/save-me-routes.js";
+import returnProductEmail from "./routes/return-email.js";
+import MembershipRouter from "./routes/membership-routes.js";
+import SubscriptionRouter from "./routes/subscription-routes-alt.js";
+import subEmailRouter from "./routes/subscription-routes.js";
+import refundEmail from "./routes/refund-email.js";
 
 const app = express();
 

@@ -1,5 +1,5 @@
 import express from "express";
-import { Membership } from "../models/membershipModel.js";
+import { Membership } from "../models/members-model.js";
 
 const MembershipRouter = express.Router();
 

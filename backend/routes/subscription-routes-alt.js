@@ -1,8 +1,8 @@
 import express from "express";
-import { Subscription } from "../models/subscriptionModel.js";
+import { Subscription } from "../models/subscriptions-model.js";
 import multer from "multer";
 import path from "path";
-import router from "./eventRoute.js";
+import router from "./event-routes.js";
 
 const SubscriptionRouter = express.Router();
 

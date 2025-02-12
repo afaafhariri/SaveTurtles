@@ -1,5 +1,5 @@
 import express from "express";
-import { Donation } from "../models/donationModel.js";
+import { Donation } from "../models/donation-model.js";
 import multer from "multer";
 import path from "path";
 
@@ -23,18 +23,16 @@ router.use(
   express.static(path.join(path.resolve(), "/uploads/receipts/"))
 );
 
-
 //Route for save a new book
-router.post("/", upload.single("paymentImage"),async (request, response) => {
+router.post("/", upload.single("paymentImage"), async (request, response) => {
   try {
     if (
       !request.body.donorName ||
       !request.body.email ||
       !request.body.contactNo ||
       !request.body.amount ||
-      !request.body. dateOfPayment||
+      !request.body.dateOfPayment ||
       !request.body.discription
-      
     ) {
       return response.status(400).send({
         message: "Send all required fields: titles: title,author,publishYear",
@@ -42,16 +40,16 @@ router.post("/", upload.single("paymentImage"),async (request, response) => {
     }
 
     const paymentImageUrl = request.file
-  ? `/uploads/receipts/${request.file.filename}`
-  : null;
+      ? `/uploads/receipts/${request.file.filename}`
+      : null;
 
     const newDonation = {
       donorName: request.body.donorName,
       email: request.body.email,
       contactNo: request.body.contactNo,
-      amount:request.body.amount,
+      amount: request.body.amount,
       dateOfPayment: request.body.dateOfPayment,
-      discription:request.body.discription,
+      discription: request.body.discription,
       paymentImageUrl,
     };
     const donation = await Donation.create(newDonation);
@@ -89,14 +87,14 @@ router.get("/:id", async (request, response) => {
 });
 
 //Route Update a book
-router.put("/:id", upload.single("paymentImage"),async (request, response) => {
+router.put("/:id", upload.single("paymentImage"), async (request, response) => {
   try {
     if (
       !request.body.donorName ||
       !request.body.email ||
-      !request.body.contactNo||
+      !request.body.contactNo ||
       !request.body.amount ||
-      !request.body. dateOfPayment||
+      !request.body.dateOfPayment ||
       !request.body.discription
     ) {
       return response.status(400).send({
@@ -113,9 +111,9 @@ router.put("/:id", upload.single("paymentImage"),async (request, response) => {
       paymentImageUrl, // Update the image URL if a new image is uploaded
     };
 
-    const result = await Donation.findByIdAndUpdate(id, updatedDonor,
-      { new: true }
-    );
+    const result = await Donation.findByIdAndUpdate(id, updatedDonor, {
+      new: true,
+    });
 
     if (!result) {
       return response.status(400).json({ message: "Book not found" });

@@ -1,6 +1,6 @@
 import express from "express";
-import { EventParticipant } from "../models/eventParticipentModel.js";
-import { EventProgram } from "../models/eventModel.js";
+import { EventParticipant } from "../models/participant-model.js";
+import { EventProgram } from "../models/event-model.js";
 import multer from "multer";
 import path from "path";
 

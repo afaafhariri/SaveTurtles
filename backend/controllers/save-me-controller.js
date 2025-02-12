@@ -1,4 +1,4 @@
-import { SaveMe } from "../models/saveMeModel.js";
+import { SaveMe } from "../models/save-me-model.js";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 

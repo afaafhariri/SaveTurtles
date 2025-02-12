@@ -1,5 +1,5 @@
 import express from "express";
-import { Refund } from "../models/refundModel.js";
+import { Refund } from "../models/refund-model.js";
 
 const router = express.Router();
 
