@@ -1,5 +1,5 @@
 import express from "express";
-import { Subscription } from "../models/subscriptions-model.js";
+import { Subscription } from "../models/subscription-model.js";
 import multer from "multer";
 import path from "path";
 import router from "./event-routes.js";

@@ -1,5 +1,5 @@
 import express from "express";
-import { Purchase } from "../models/purchase-model.jss";
+import { Purchase } from "../models/purchase-model.js";
 import { Product } from "../models/product-model.js";
 import multer from "multer";
 import path from "path";
